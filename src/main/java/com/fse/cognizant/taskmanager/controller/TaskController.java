@@ -10,26 +10,26 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 @CrossOrigin
-@Controller
-@RequestMapping(path="/task")
+@RestController
+@RequestMapping("task")
 public class TaskController {
 	
 	
 	@Autowired
 	private TaskService taskService;
 	
-	@PostMapping(path="/add")
+	@PostMapping(value="/add")
 	public @ResponseBody String addNewTask (@RequestBody TaskObj task) {
 
 		return taskService.addNewTask(task);
 	}
 
-	@GetMapping(path="/all")
+	@GetMapping(value="/all")
 	public @ResponseBody List<TaskObj> getAllTasks() {
 		return taskService.getAllTasks();
 	}
 	
-	@PutMapping(path="/update")
+	@PutMapping(value="/update")
 	public @ResponseBody
 	Task updateTask(@RequestBody TaskObj task){
 		

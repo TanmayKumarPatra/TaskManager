@@ -1,6 +1,6 @@
 spring:
   datasource:
-    url: jdbc:mysql://localhost:3306/fse_cognizant
+    url: jdbc:mysql://localhost:3306/fse_cognizant?useSSL=false&useLegacyDatetimeCode=false&serverTimezone=UTC
     username: tanmay
     password: tanmay@321
   jpa:
